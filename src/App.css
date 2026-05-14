@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: -0.5px;
+}
+
+.app-header p {
+  color: #6b7280;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+/* Main layout */
+.app-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .app-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card base */
+.bill-form,
+.result-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 1.75rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Bill input */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.input-wrapper:focus-within {
+  border-color: #6366f1;
+}
+
+.currency-symbol {
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #6366f1;
+  background: #f0f0ff;
+  border-right: 2px solid #e5e7eb;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  font-family: 'Sora', sans-serif;
+  font-weight: 500;
+  height: 48px;
+  width: 100%;
+  color: #1a1a2e;
+}
+
+/* Tip buttons */
+.tip-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.tip-btn {
+  flex: 1;
+  min-width: 48px;
+  padding: 0.5rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tip-btn:hover {
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+.tip-btn.active {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: #fff;
+}
+
+.custom-tip-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.custom-tip-row label {
+  font-size: 0.8rem;
+  color: #6b7280;
+  text-transform: none;
+  letter-spacing: 0;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.custom-tip-row input {
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.4rem 0.75rem;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.9rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.custom-tip-row input:focus {
+  border-color: #6366f1;
+}
+
+/* Friends counter */
+.friends-counter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.counter-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  background: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #6366f1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.counter-btn:hover {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: #fff;
+}
+
+.friends-counter input {
+  width: 70px;
+  text-align: center;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.4rem;
+  font-family: 'Sora', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  outline: none;
+}
+
+.friends-counter input:focus {
+  border-color: #6366f1;
+}
+
+/* Result Card */
+.result-card {
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  color: #fff;
+}
+
+.result-card h2 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a5b4fc;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(99, 102, 241, 0.25);
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.highlight-row span:first-child {
+  font-size: 0.85rem;
+  color: #a5b4fc;
+  font-weight: 500;
+}
+
+.big-amount {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 1rem 0;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.result-row span:first-child {
+  color: #d1d5db;
+}
+
+.result-row span:last-child {
+  font-weight: 600;
+  color: #fff;
+}
+
+.result-row.muted span:first-child {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.result-row.muted span:last-child {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.tip-value {
+  color: #86efac !important;
+}
+
+.friends-note {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.friends-note strong {
+  color: #a5b4fc;
+}

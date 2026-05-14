@@ -1,0 +1,15 @@
+{
+  "tipOptions": [5, 10, 15, 20, 25],
+  "defaultTipPercent": 15,
+  "currency": "₹",
+  "appTitle": "Bill Splitter & Tip Calc",
+  "labels": {
+    "totalBill": "Total Bill Amount",
+    "tipPercent": "Tip Percentage",
+    "numFriends": "Number of Friends",
+    "perPersonBill": "Bill per Person",
+    "perPersonTip": "Tip per Person",
+    "totalPerPerson": "Total per Person",
+    "totalTip": "Total Tip Amount"
+  }
+}
